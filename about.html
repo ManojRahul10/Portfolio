@@ -30,7 +30,7 @@
           <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Designs</a>
+          <a class="nav-link" href="design.html">Designs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
@@ -61,7 +61,6 @@
               <img src="Assests\imgs\About.jpeg" alt="Section Image">
             </div>
             <div class="col-md-6">
-              <img src="Assests\icons\vision.png" alt="Skill Icon" class="img-fluid mb-3 skill-icon1">
               <h2>MY VISSION</h2>
               <ul>
                 <li>Hard Work Pays Off</li>
@@ -84,7 +83,6 @@
         <div class="col-lg-10 content-box">
           <div class="row align-items-center flex-column-reverse flex-md-row">
             <div class="col-md-6">
-              <img class="mission1" src="Assests\icons\mission.png" alt="MISSION" class="img-fluid mb-3 skill-icon1>
               <h2>MY MISSION</h2>
               <ul>
                 <li>Work with Purpose</li>
@@ -145,6 +143,25 @@
         }
       });
     });
+    document.addEventListener('DOMContentLoaded', function() {
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.content-box').forEach(box => {
+    observer.observe(box);
+  });
+});
+
   </script>                              
 </body>
 </html>
