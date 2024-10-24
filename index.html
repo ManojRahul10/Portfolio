@@ -10,6 +10,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.waves.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
@@ -29,6 +32,9 @@
         <li class="nav-item">
           <a class="nav-link" href="about.html">About</a>
         </li>
+        <li class="nav-item"></li>
+        <a class="nav-link" href="project.html">Projects</a>
+      </li>
         <li class="nav-item">
           <a class="nav-link" href="design.html">Designs</a>
         </li>
@@ -37,29 +43,34 @@
         </li>
       </ul>
       <form class="form-inline">
-        <a href="https://drive.google.com/file/d/1px0--nItAx3TnLDiGz2pU6fAIVlvdHAp/view?usp=sharing"><button class=" btn btn-dark my-2 my-sm-0" type="button">Download CV</button></a> 
+        <a href="https://drive.google.com/file/d/1vqYTP7Wtr_JxoYk4awFfyNKv76-rTOxm/view?usp=sharing"><button class=" btn btn-dark my-2 my-sm-0 " type="button">Download CV</button></a> 
       </form>
     </div>
   </nav>
                                                    <!-- NAVBAR SECTION OVER -->
-         <section class="container my-5 main-section">
-           <div class="row align-items-center">
-               <div class="col-lg-6 mb-4 mb-lg-0">
-         <h6>Manoj Rahul J</h6>
-              <h1 style="font-weight: bolder;">Creative problem<br> Solver powered by tech and fueled by curiosity</h1>
-                 <p>I aspire to pursue a highly challenging job in the field where I can leverage my knowledge, creativity, 
-                  and strong communication skills to meet people's requirements and enhance the overall quality of the organization.</p>
-          <a href="contact.html"><button class="btn btn-dark">Ping Me!</button></a> 
-                        </div>
-           <div class="col-lg-6">
-       <img src="Assests\imgs\Learning-bro.png" alt="Responsive Image" class="img-fluid">
-  </div>
-  
-   </div>
-   </section>
-   <!-- second section start -->
+    <div id="vanta-canvas">
+      <section class="container my-5 main-section">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+      <h6>Manoj Rahul J</h6>
+           <h1 style="font-weight: bolder;">Creative problem<br> Solver powered by tech and fueled by curiosity</h1>
+              <p>I aspire to pursue a highly challenging job in the field where I can leverage my knowledge, creativity, 
+               and strong communication skills to meet people's requirements and enhance the overall quality of the organization.</p>
+       <a href="contact.html" class="anchor"><button class="button">
+         <span>Button</span>
+       </button></a> 
+                     </div>
+        <div class="col-lg-6">
+    <img src="Assests\imgs\Learning-bro.png" alt="Responsive Image" class="img-fluid">
+</div>
 
-   <section class="container about-section py-5">
+</div>
+</section>
+    </div>
+         
+   <!-- second section start -->
+<div id=""> 
+  <section class="container about-section py-5">
     <div class="row align-items-center">
       <div class="col-lg-6">
         <img src="Assests\imgs\Writer's block-bro.png" alt="About Us Image" >
@@ -76,6 +87,8 @@
       </div>
     </div>
   </section>
+</div>
+   
   <!-- internship experience -->
   <section class="container internship-section py-5">
     <div class="row mb-4">
@@ -131,7 +144,7 @@
       <div class="col-lg-6 mb-4">
         <div class="internship-card p-4 h-100">
           <h3 class="mb-3" >Aerogo</h3>
-          <h5 class="text-primary mb-2">Wix Development</h5>
+          <h5 class="text-primary mb-2">Wordpress Development</h5>
           <p class="text-muted mb-4">Duration: June 2022 - July 2022</p>
           <ul class="list-unstyled">
             <li class="mb-2">
@@ -155,7 +168,7 @@
         <div class="internship-card p-4 h-100">
           <h3 class="mb-3" >V-Dart</h3>
           <h5 class="text-primary mb-2">Graphic Designer</h5>
-          <p class="text-muted mb-4">Duration: January 2024 - May 2024</p>
+          <p class="text-muted mb-4">Duration: January 14 - May 10</p>
           <ul class="list-unstyled">
             <li class="mb-2">
               <i class="fas text-primary mr-2"></i>
@@ -190,7 +203,7 @@
           <img src="Assests\icons\monitor.png" alt="Skill Icon" class="img-fluid mb-3 skill-icon">
           <h5 class="mb-3">TECHNICAL SKILLS</h5>
           <br>
-          <p class="text-muted">I have introductory-level expertise in HTML, CSS, Bootstrap, JavaScript, React JS and Java.</p>
+          <p class="text-muted">I have introductory-level expertise in HTML, CSS, Bootstrap, JavaScript and Java.</p>
           <br>
         <br>
         </div>
@@ -377,8 +390,32 @@
         } else {
           $('.navbar-custom').removeClass('scrolled');
         }
-      });
-    });
+      })
+    })
+           VANTA.WAVES({
+          el: "#vanta-canvas",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x9f9f9f
+        })
+        VANTA.NET({
+  el: "#vanta-net",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xff0000,
+  backgroundColor: 0xffffff
+})
+      
   </script>                              
 </body>
 </html>
